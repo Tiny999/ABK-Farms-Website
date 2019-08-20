@@ -1,0 +1,186 @@
+/* Variables */
+:root{
+  --primary-color: #7cfc00;
+  --secondary-color: #228b22;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+}
+
+/* Css Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7rem;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-primary{
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.m-heading{
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.btn{
+  display: inline-block;
+  color: #fff;
+  border: none;
+  padding: .8rem;
+  margin: 1rem;
+}
+
+.btn-primary{ background: var(--primary-color) }
+.btn-secondary{ background: var(--secondary-color) }
+.btn-dark{ background: var(--dark-color) }
+
+.py-1{ padding: 1.5rem 0; }
+
+/* Navbar Styling */
+#navbar{
+  background: #fff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+#navbar .logo{
+  width: 80px;
+}
+
+#navbar ul{
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+#navbar ul li{
+  margin: .25rem;
+}
+
+#navbar ul li a{
+  padding: 0.75rem;
+  color: var(--dark-color);
+  font-weight: bold;
+  /* transition: all 2s ease; */
+}
+
+#navbar ul li a.current{
+  background: var(--secondary-color);
+  font-weight: bold;
+}
+
+#navbar ul li a.current:hover{
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 0;
+}
+
+#navbar ul li a:hover{
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+}
+
+#navbar .social{
+  justify-self: center;
+}
+
+#navbar .social i{
+  color: var(--secondary-color);
+}
+
+/* Showcase Area */
+#showcase{
+  background: var(--dark-color);
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+#showcase:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/showcase.jpg) no-repeat center center/cover;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+#showcase .showcase-content{
+  z-index: 1;
+}
+
+/* What We Do Section */
+#what{
+  background: var(--light-color);
+}
+
+#what .container{
+  background: #fff;
+}
+
+#what .items{
+  display: flex;
+  padding: 1rem;
+}
+
+#what .items .item{
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i{
+  background: var(--primary-color);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Footer Styling */
+#footer{
+  background: var(--secondary-color);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f4f4f4;
+}
